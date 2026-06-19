@@ -1,8 +1,9 @@
 # NutryWorld — INSIGHTS (brief di progetto)
 
 > Documento di sintesi raccolto in fase di discovery. Serve come **fonte unica di
-> verità** per quando si passerà allo sviluppo effettivo del sito.
-> In questa fase **non si sviluppa nulla**: si raccolgono solo le decisioni.
+> verità** per lo sviluppo del sito.
+> Stato: discovery completata, asset chiave nel repo → **pronti a sviluppare**.
+> Per il riepilogo cronologico dell'intera sessione vedi `SESSION_INSIGHTS.md`.
 > Ultimo aggiornamento: 2026-06-19.
 
 ---
@@ -83,9 +84,8 @@
 
 ### Mappatura mascotte ↔ pagina
 
-> Le immagini sono fornite come allegati in chat e vanno aggiunte in
-> `assets/mascots/` con i nomi indicati (convenzione utente: CamelCase).
-> Mappatura **confermata dall'utente**.
+> Le immagini sono **già nel repo** in `assets/mascots/` (convenzione nomi:
+> CamelCase). Mappatura **confermata dall'utente**.
 
 | Mascotte (descrizione immagine) | Pagina | Nome file |
 |---|---|---|
@@ -130,14 +130,21 @@ Pagine confermate:
 
 ## 8. Home page
 
-- **Hero:** un **video** (da produrre) — render **drone view di NutryWorld** che
-  parte dall'alto e mostra tutte le zone della farm.
+- **Hero — VIDEO INTRO + SMOOTH SCROLL (deciso):** la home si apre con un
+  **video intro** (render cinematografico **drone view di NutryWorld**, dall'alto
+  verso le zone della farm). Il video è **già nel repo**:
+  `assets/video/NutryWorldIntro.mp4`.
+- Il video **NON è un semplice loop**: fa da **background scroll-scrubbed** e
+  viene **"consegnato" a uno smooth scroll** della pagina (scroll cinematografico).
+  → Implementazione di riferimento già in repo: skill **`scroll-video-handoff`**
+  (Vite + React + GSAP ScrollTrigger + Lenis; video di sfondo scrubbed sullo
+  scroll, poi handoff al contenuto della pagina).
 - **Hero headline:** ancora da definire; deve giocare sul nome **"Nutry World"**
   (proposta da rifinire in fase di sviluppo).
 - La **pelliccia non compare in home** (vedi sopra).
 - **Ordine di scorrimento della home (verticale):** da definire insieme in fase
-  di sviluppo. *(Domanda non ancora risolta — l'utente non aveva chiaro il punto;
-  proporre una bozza di sequenza quando si parte col design.)*
+  di sviluppo. *(Domanda non ancora risolta — proporre una bozza di sequenza
+  quando si parte col design.)*
 - **Prove di fiducia (testimonianze, partner, certificazioni, numeri):** **nulla
   di particolare** per ora.
 
@@ -157,27 +164,39 @@ Pagine confermate:
 
 ## 10. Asset disponibili
 
-- **Mascotte Nutry:** 5 illustrazioni (vedi tabella §6) — 4 già fornite +
-  `NutryHome.png` in arrivo. **Da caricare nel repo** in `assets/mascots/`.
+- **Mascotte Nutry:** 5 illustrazioni **già nel repo** in `assets/mascots/`
+  (`NutryHome.png`, `NutrytiChef.png`, `NutryPellame.png`, `NutryPellicce.png`,
+  `NutryPiscina.png`). Vedi tabella §6.
+  - ⚠️ **`NutryPellicce.png`:** l'utente ha fornito una **versione aggiornata**
+    (in chat) da sostituire a quella in repo, ma l'allegato non era sul
+    filesystem → **sostituzione pendente** (va ricaricato il file aggiornato).
+- **Video hero:** **presente** → `assets/video/NutryWorldIntro.mp4` (render
+  cinematografico drone view). Vedi §8.
 - **Logo:** **non ancora fatto** (verrà creato in seguito).
 - **Foto reali animali/farm:** per ora **no** → si usano **solo le mascotte**.
-- **Video hero:** da produrre (render drone view).
 - **Testi:** in gran parte da scrivere.
 
 ---
 
 ## 11. Stato & prossimi passi
 
-- Fase attuale: **solo raccolta insight** (nessuno sviluppo).
-- Skill già installate e utili al sito: `impeccable`, `ui-ux-pro-max`,
-  `frontend-design`, `design`, `design-system`.
+- Fase attuale: **pronti a partire con lo sviluppo del sito.** Asset chiave
+  (mascotte + video intro) sono nel repo.
+- **Branch di lavoro:** `claude/eager-tesla-kyuatg` (branch di **default** del
+  repo; deciso a sessione in corso).
+- Skill installate e utili al sito: `impeccable`, `ui-ux-pro-max`,
+  `frontend-design`, `design`, `design-system`, e in più
+  **`scroll-video-handoff`** (per il video di sfondo scroll-scrubbed in home).
 
 ### Open questions (da chiarire prima/durante lo sviluppo)
 1. **Hero headline** definitiva sul nome "Nutry World".
-2. **Ordine delle sezioni della home** (sequenza verticale).
+2. **Ordine delle sezioni della home** (sequenza verticale, dopo l'intro video).
 3. Conferma palette dopo analisi asset con `impeccable`.
+4. Ricarica della versione aggiornata di **`NutryPellicce.png`** (sostituzione
+   pendente, vedi §10).
 
 ### Risolte
-- Mappatura mascotte ↔ pagina **confermata** (vedi §6).
-- `NutryHome.png` sarà caricata dall'utente per la Home; `NutryPellicce.png`
-  (Nutry che saluta col cucciolo) è la mascotte della pagina **Pellicce**.
+- Mappatura mascotte ↔ pagina **confermata** (vedi §6); 5 mascotte nel repo.
+- **Home:** intro = `assets/video/NutryWorldIntro.mp4`, seguito da smooth scroll
+  (skill `scroll-video-handoff`).
+- Lingue: IT + EN. Tipo sito: brand-showcase reale-simulato. Tono: giocoso/friendly.
