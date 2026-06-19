@@ -1,0 +1,81 @@
+/* ============================================================
+   Nutry World — design tokens
+   World: "fattoria tropicale al tramonto" — espresso scuro + accenti tropicali.
+   Palette ancorata agli asset reali (mascotte): caramello-pelliccia dominante,
+   verde camicia hawaiana, teal costume, ambra denti/sole.
+   ============================================================ */
+:root {
+  /* --- Surfaces (warm espresso, NOT cream) --- */
+  --ink: #241712; /* page background */
+  --ink-2: #2e1e16; /* raised surface */
+  --ink-3: #3a271c; /* cards / inputs */
+  --ink-line: #4a3325; /* hairlines / borders */
+
+  /* --- Text on dark --- */
+  --paper: #f6ece0; /* primary text (warm white) */
+  --paper-dim: #d9c4ab; /* secondary text — ≥4.5:1 on --ink */
+  --paper-faint: #b39c82; /* tertiary / captions */
+
+  /* --- Brand & accents (from mascot pixels) --- */
+  --fur: #c68a5b; /* primary brand — nutria caramel */
+  --fur-deep: #8b5438; /* deep leather brown */
+  --fur-dark: #4b2d1c; /* darkest fur / outline */
+  --leaf: #6bb04a; /* hawaiian-shirt green */
+  --leaf-deep: #3f7e2e;
+  --lagoon: #2fb6ac; /* swim-trunks teal */
+  --amber: #f6a623; /* incisor / sun — main CTA */
+  --amber-deep: #d9851a;
+  --hibiscus: #e2553f; /* coral — meat / cheeky accent */
+
+  /* --- Semantic --- */
+  --bg: var(--ink);
+  --accent: var(--amber);
+  --accent-ink: #2a1707; /* text on amber */
+
+  /* --- Per-page tints (set on a wrapper, used by gradients) --- */
+  --tint: var(--fur);
+
+  /* --- Radii --- */
+  --r-sm: 10px;
+  --r-md: 16px;
+  --r-lg: 26px;
+  --r-pill: 999px;
+
+  /* --- Shadows (warm, soft) --- */
+  --shadow-sm: 0 2px 8px rgba(20, 10, 4, 0.35);
+  --shadow-md: 0 14px 40px rgba(15, 8, 3, 0.45);
+  --shadow-glow: 0 18px 60px rgba(246, 166, 35, 0.16);
+
+  /* --- Fluid type scale (~1.27 ratio) --- */
+  --step--1: clamp(0.83rem, 0.8rem + 0.15vw, 0.92rem);
+  --step-0: clamp(1rem, 0.95rem + 0.25vw, 1.13rem);
+  --step-1: clamp(1.27rem, 1.18rem + 0.45vw, 1.6rem);
+  --step-2: clamp(1.6rem, 1.42rem + 0.9vw, 2.25rem);
+  --step-3: clamp(2.05rem, 1.7rem + 1.7vw, 3.2rem);
+  --step-4: clamp(2.6rem, 2rem + 3vw, 4.5rem);
+  --step-5: clamp(3.1rem, 2rem + 5.4vw, 6rem);
+
+  /* --- Spacing --- */
+  --space-xs: 0.5rem;
+  --space-sm: 0.85rem;
+  --space-md: 1.4rem;
+  --space-lg: clamp(2rem, 1.4rem + 3vw, 4rem);
+  --space-xl: clamp(3.5rem, 2.4rem + 5.5vw, 7.5rem);
+  --maxw: 1180px;
+
+  /* --- Fonts --- */
+  --font-display: "Fredoka", ui-rounded, "Segoe UI", system-ui, sans-serif;
+  --font-body: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* --- Z-index scale (semantic) --- */
+  --z-bg: 0;
+  --z-tint: 1;
+  --z-content: 2;
+  --z-progress: 40;
+  --z-nav: 50;
+  --z-modal: 80;
+
+  /* --- Motion --- */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1); /* ease-out-quint-ish */
+  --dur: 0.6s;
+}
