@@ -37,6 +37,25 @@ bash scripts/swap-bg-video.sh ../assets/video/NutryWorldIntro.mp4 public/bg.mp4
 Su mobile/touch il video viene sostituito da uno sfondo statico (vedi
 `.mobile-poster` in `components.css`).
 
+## Deploy su Vercel
+
+Il sito è una **SPA statica** (Vite). L'app vive nella sottocartella `website/`,
+quindi su Vercel va impostata la **Root Directory**.
+
+1. Su Vercel: **New Project** → importa il repo `vanherik/NutryWorld`.
+2. **Root Directory** → `website` (importante: l'app non è alla radice del repo).
+3. Framework Preset: **Vite** (rilevato in automatico).
+   - Build Command: `npm run build` · Output Directory: `dist` (default).
+4. Deploy. Fatto.
+
+Il file `website/vercel.json` gestisce:
+- **rewrite SPA** (`/(.*) → /index.html`) così gli URL puliti (`/pellame`,
+  `/visitaci`) e i refresh funzionano con `BrowserRouter`;
+- header di **cache** per asset, video e immagini.
+
+Nessuna variabile d'ambiente né database: il sito è interamente statico e la
+form di Visitaci è in modalità demo (mostra solo conferma, non invia dati).
+
 ## Palette
 
 Ancorata agli asset reali (mascotte), tema "fattoria tropicale al tramonto":
