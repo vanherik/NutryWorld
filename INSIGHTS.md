@@ -90,7 +90,7 @@
 | Mascotte (descrizione immagine) | Pagina | Nome file |
 |---|---|---|
 | Nutry che **saluta**, camicia hawaiana verde a palme/ibischi (senza cucciolo) | **Home** | `NutryHome.png` |
-| Nutry **chef** (toque + giacca bianca) che mangia una coscia arrosto | **Nutryti** (carne) | `Nutryti.png` |
+| Nutry **chef** (toque + giacca bianca) che mangia una coscia arrosto | **Nutryti** (carne) | `NutrytiChef.png` |
 | Nutry con **portafoglio in pelle** in mano e **borsa/tote in pelle con monogramma "N"** | **Pellame** | `NutryPellame.png` |
 | Nutry che **saluta**, camicia hawaiana verde, **tiene in braccio un cucciolo di nutria** | **Pellicce** | `NutryPellicce.png` |
 | Nutry in **costume da bagno** (ananas), infradito, occhiali da sole, **cocktail tropicale** | **Visitaci** | `NutryPiscina.png` |
