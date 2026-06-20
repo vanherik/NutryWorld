@@ -6,7 +6,7 @@ export default function Mascot({ name, alt, size = "lg", float = true, className
       <span className="mascot__halo" aria-hidden="true" />
       <img
         className="mascot__img"
-        src={`/mascots/${name}.png`}
+        src={`/mascots/${name}.png?v=2`}
         alt={alt}
         loading="lazy"
         decoding="async"

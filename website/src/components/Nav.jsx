@@ -13,7 +13,7 @@ export default function Nav() {
     <header className="nav">
       <div className="nav__inner wrap">
         <Link to="/" className="brand" onClick={() => setOpen(false)}>
-          <img className="brand__mark" src="/mascots/home.png" alt="" aria-hidden="true" />
+          <img className="brand__mark" src="/mascots/home.png?v=2" alt="" aria-hidden="true" />
           <span className="brand__word">
             Nutry<span className="brand__word-accent">World</span>
           </span>

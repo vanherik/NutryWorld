@@ -11,7 +11,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="wrap footer__inner">
         <div className="footer__brand">
-          <img src="/mascots/piscina.png" alt="" aria-hidden="true" className="footer__mascot" />
+          <img src="/mascots/piscina.png?v=2" alt="" aria-hidden="true" className="footer__mascot" />
           <div>
             <span className="brand__word footer__word">
               Nutry<span className="brand__word-accent">World</span>

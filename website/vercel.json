@@ -10,9 +10,9 @@
       ]
     },
     {
-      "source": "/(.*).(mp4|png|jpg|jpeg|webp|svg|woff2)",
+      "source": "/(.*).(mp4|png|jpg|jpeg|webp|svg)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=604800, must-revalidate" }
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
       ]
     }
   ]
